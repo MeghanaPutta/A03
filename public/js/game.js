@@ -2,7 +2,7 @@ function ageCalculate() {
     var bDate = document.getElementById('birth_date').value;
 
     var d = new Date(bDate);
-    var mdate = bDate.toString();
+    var mDate = bDate.toString();
 
     var y = parseInt(mdate.substring(0, 4), 10);
 
@@ -12,7 +12,7 @@ function ageCalculate() {
     var now = new Date();
 
     var bday = new Date(y, m - 1, d);
-    var differenceInMilisecond = today.valueOf() - bday.valueOf();
+    var differenceInMilisecond = now.valueOf() - bday.valueOf();
     var newage = Math.floor(differenceInMilisecond / 31536000000);
 
     document.getElementById("age").innerHTML = newage + " years ";
