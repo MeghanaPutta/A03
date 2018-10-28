@@ -1,22 +1,22 @@
 function ageCalculate() {
-    var birthDate = document.getElementById('birth_date').value;
+    var bDate = document.getElementById('birth_date').value;
 
-    var d = new Date(birthDate);
-    var mdate = birthDate.toString();
+    var d = new Date(bDate);
+    var mdate = bDate.toString();
 
-    var yearThen = parseInt(mdate.substring(0, 4), 10);
+    var y = parseInt(mdate.substring(0, 4), 10);
 
-    var monthThen = parseInt(mdate.substring(5, 7), 10);
+    var m = parseInt(mdate.substring(5, 7), 10);
 
-    var dayThen = parseInt(mdate.substring(8, 10), 10);
-    var today = new Date();
+    var d = parseInt(mdate.substring(8, 10), 10);
+    var now = new Date();
 
-    var birthday = new Date(yearThen, monthThen - 1, dayThen);
-    var differenceInMilisecond = today.valueOf() - birthday.valueOf();
-    var year_age = Math.floor(differenceInMilisecond / 31536000000);
+    var bday = new Date(y, m - 1, d);
+    var differenceInMilisecond = today.valueOf() - bday.valueOf();
+    var newage = Math.floor(differenceInMilisecond / 31536000000);
 
-    document.getElementById("age").innerHTML = year_age + " years ";
-    if ((today.getMonth() == birthday.getMonth()) && (today.getDate() == birthday.getDate())) {
+    document.getElementById("age").innerHTML = newage + " years ";
+    if ((today.getMonth() == bday.getMonth()) && (now.getDate() == bday.getDate())) {
         alert("Happiest Birthday...!!!");
     }
     
