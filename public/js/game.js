@@ -16,8 +16,5 @@ function ageCalculate() {
     var newage = Math.floor(diff / 31536000000);
 
     document.getElementById("age").innerHTML = newage + " years ";
-    if ((today.getMonth() == bday.getMonth()) && (now.getDate() == bday.getDate())) {
-        alert("Happiest Birthday...!!!");
-    }
     
 }
