@@ -1,4 +1,4 @@
-function ageCalculate() {
+function ageCalculate(y,m,d) {
     var bDate = document.getElementById('birth_date').value;
 
     var d = new Date(bDate);
