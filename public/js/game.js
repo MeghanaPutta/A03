@@ -17,7 +17,7 @@ function ageCalculate() {
 
     document.getElementById("age").innerHTML = year_age + " years ";
     if ((today.getMonth() == birthday.getMonth()) && (today.getDate() == birthday.getDate())) {
-        alert("Happy B'day!!!");
+        alert("Happiest Birthday...!!!");
     }
     
 }
