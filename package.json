@@ -3,6 +3,9 @@
     "version": "0.0.1",
     "description": "resume app",
     "main": "app.js",
+    "scripts": {
+        "start": "node your-script.js"
+    },
     "dependencies": {
         "express": "latest",
         "morgan": "latest",
@@ -16,4 +19,7 @@
         "url": "https://bitbucket.org/professorcase/a03"
     },
     "license": "Apache-2.0"
+    
+    
+
 }
