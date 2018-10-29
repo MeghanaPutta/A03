@@ -15,6 +15,5 @@ function ageCalculate(d) {
     var diff = now.valueOf() - bday.valueOf();
     var newage = Math.floor(diff / 31536000000);
 
-    document.getElementById("age").innerHTML = newage + " years ";
-    
+   return newage + " years ";
 }

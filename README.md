@@ -1,19 +1,11 @@
-# w07
+# A03
 
-A resume site using Node, Express, BootStrap, EJS
+A personal full-stack web app
 
-## How to use
+This contains folders (.git, node_modules, public, views), files (.gitignore, access.log), app.js , JSON files (package,package-lock) and Procfile.
 
-Fork into your own cloud account. 
-Clone the site to your machine.
-Open a command window in the new folder.
-Run npm install to install dependencies listed in package.json.
-Run node app.js to start the server.  (Hit CTRL-C to stop.)
+Public again contains css, images , js and test folders.
 
-```
-> npm install
-> node app.js
-```
+Views again contains ejs files(404, contact, footer, game, header, index).
 
-Point your browser to `http://localhost:8081`. 
-
+Along with the above we use Bootstrap, Responsive Design, JQuery, QUnit, Visual Studio Code, Git, TortoiseGit and Heroku.
