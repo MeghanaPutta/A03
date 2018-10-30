@@ -1,20 +1,27 @@
-function ageCalculate(d) {
-    var bDate = document.getElementById('birth_date').value;
 
-    var d = new Date(bDate);
-    var d1 = bDate.toString();
+var x=$("#values").click(function(){
+    var ageEntered = new Date($('#birth_date').val());
+    getAge(ageEntered)
+});
 
-    var y = parseInt(d1.substring(0, 4), 10);
-
-    var m = parseInt(d1.substring(5, 7), 10);
-
-    var d = parseInt(d1.substring(8, 10), 10);
-    var now = new Date();
-
-    var bday = new Date(y, m - 1, d);
-    var diff = now.valueOf() - bday.valueOf();
-    var newage = Math.floor(diff / 31536000000);
-
-    document.getElementById("age").innerHTML = newage + " years ";
-    
+function getAge(dateString) {
+    var today = new Date();
+    var birthDate = new Date(dateString);
+    // console.log("this year is "+ today.getFullYear() +" birth year is "+ birthDate.getFullYear())
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    if((age<0)||(isNaN(age))||(
+        birthDate.getMonth()>12||birthDate.getMonth()<1)||
+    (birthDate.getMonth()>31||birthDate.getMonth()<1)){
+        age="invalid"
+    }
+    if($("#age"))
+    {
+     $("#age").html("Your age is "+ age);
+    }
+    return age;
 }
+
